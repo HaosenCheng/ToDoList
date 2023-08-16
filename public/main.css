@@ -1,0 +1,110 @@
+header {
+  background-color: cadetblue;
+  margin-top: 0;
+  padding: 0;
+}
+
+
+
+.mainList {
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:white; 
+    padding: 0;
+    position: relative;
+}
+
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 500px;
+    height: 100px;
+    background-color:cadetblue;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+  
+li:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+  width:300px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+#todo {
+  margin-left: 80px;
+  margin-right: 40px;
+  width: 20px;
+  height: 20px;
+}
+
+#addNewLi{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#addNew {
+  width:inherit;
+  height:inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:150px;
+}
+
+#inputLine{
+  background-color: transparent;
+
+}
+
+label {
+  color: black;
+}
+
+#todo {
+  accent-color: #777
+}
+
+#todo:checked+label {
+  color: #777;
+  text-decoration: line-through;
+  &::before,
+  &::after {
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect 1px, 1px, 1px, 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  &::before {
+    content: "[start of stricken text]";
+  }
+  &::after {
+    content: "[end of stricken text]";
+  }
+}

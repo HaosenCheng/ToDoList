@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <div class = "mainList">
+        <ul id="dynamicList">
+
+        <% if (locals.itemListToday) { %>
+            <% for (var i = 0; i < itemListToday.length; i++ ) { %>
+                <li> 
+                    <input type = "checkbox" id = "todo">
+                    <label for="todo">
+                        <h3><%= itemListToday[i] %></h3>
+                    </label>
+                </li>
+        <%}}%>
+
+            <li id="addNewLi">  
+                <form action="/" method="POST" id="addNew">
+                    <input type="submit" id="submitButton" value="+">
+                    <input type="text" name="toDoItem" id="inputLine" placeholder="New Item">
+                </form>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+.mainList {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    background-color:bisque; 
+};
+
+li{
+    display:inline-block;
+}
+
+label {
+  color: black;
+}
+
+#todo {
+  accent-color: #777
+}
+
+#todo:checked+label {
+  color: #777;
+  text-decoration: line-through;
+  &::before,
+  &::after {
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect 1px, 1px, 1px, 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  &::before {
+    content: "[start of stricken text]";
+  }
+  &::after {
+    content: "[end of stricken text]";
+  }
+}
